@@ -1,0 +1,584 @@
+‎\documentclass{IJFS}‎
+
+
+
+‎\usepackage{amsfonts,amsthm,amsmath,amssymb,dsfont}‎
+‎\usepackage{amsmath‎,    ‎enumitem}‎
+‎\usepackage{graphicx}‎
+‎\usepackage{color}‎
+‎%\usepackage[colorlinks]{hyperref}‎
+‎\usepackage[all]{xy}‎
+‎\usepackage{subfigure}‎
+‎\usepackage{tikz}‎
+‎\usetikzlibrary[arrows,shapes,graphs,decorations.pathmorphing,backgrounds,positioning,fit,petri]‎
+‎\usepackage{ amscd‎,   ‎eufrak}‎
+
+ ‎\usepackage{amssymb}‎
+ ‎\usepackage{amsmath}‎
+ 
+ ‎\usepackage{mathrsfs}‎
+ ‎\usepackage{amsfonts}‎
+
+ ‎\usepackage{verbatim}‎
+
+
+‎\newtheorem{theorem}{Theorem}[section]‎
+‎\newtheorem{lemma}[theorem]{Lemma}‎
+‎\newtheorem{proposition}[theorem]{Proposition}‎
+‎\newtheorem{corollary}[theorem]{Corollary}‎
+‎\newtheorem{notation}[theorem]{Notation}‎
+‎\newtheorem{definition}[theorem]{Definition}‎
+‎\newtheorem{example}[theorem]{Example}‎
+
+ ‎\def\dis{\displaystyle}‎
+ 
+‎\begin{document}‎‎
+‎
+\addtocounter{page}{0}
+
+‎\titleijfs{‎‎Fuzzy Magic Labeling of  Simple  Graphs‎}‎
+
+‎\author[1,2]{M‎. ‎Fathalian}‎ 
+‎\author[2]{R‎. ‎A‎. ‎Borzooei}‎
+‎\author[1]{M‎. ‎Hamidi}‎
+‎\affil[1]{Department of Mathematics‎, ‎Faculty of Mathematics‎, ‎Payame Noor University‎,  ‎Tehran‎, ‎Iran}‎
+‎\affil[2]{Department of Mathematics‎, ‎Shahid Beheshti University‎, ‎Tehran‎, ‎Iran}‎
+
+‎\emails{hamidi@pnu.ac.ir‎,  ‎borzooei@sbu.ac.ir‎, ‎fathalian.math@gmail.com}‎
+
+‎\CorrespondAuthor{R‎. ‎A‎. ‎Borzooei}‎
+
+‎\oddPageHead{Fuzzy Magic Labeling of  Simple  Graphs}‎
+‎\evenPageHead{M‎. ‎Fathalian‎, ‎R‎. ‎A‎. ‎Borzooei‎, ‎M‎. ‎Hamidi}‎
+
+‎\abstractijfs{‎
+‎The study of  labeling graphs exposed  to various distance constraints is motivated by the problem of minimizing the span of non-interfering frequencies assigned to radio transmitters‎. ‎However‎,
+‎fuzzy labeling models yield more precision‎, ‎flexibility and compatibility to the system compared to the classical models‎. ‎In this paper we show that whether any simple graph is fuzzy magic labelizing‎, ‎by considering the   concept of    fuzzy magic labeling  of   graphs‎.  ‎In fact‎, ‎we prove that  every  connected  graph  is   a  fuzzy magic labelizing  graph‎. ‎Finally‎,  ‎we give some applications for fuzzy magic labeling graphs‎.
+}
+
+‎\keywords_ijfs{Fuzzy graph‎, ‎fuzzy magic labeling‎.
+‎\vspace{1mm}\\‎
+‎{\it 2010 MSC}‎: ‎03E72‎.
+}
+
+‎\Vol{15}	\No{1}	\Year{2019}	\Pages{1-12}‎
+‎\Received{January 2019}	\Revised{February 2019}		\Accepted{March 2019}‎
+‎
+‎{\let\newpage\relax\maketitle}‎
+‎\thispagestyle{fancylogo}‎
+
+‎\mabstract‎
+
+
+‎\section{ Introduction}‎
+‎Zadeh \cite{1} was first introduced the concept of fuzzy relations which    describes the phenomena of uncertainty in real life situation and has a widespread‎
+‎application in pattern recognition‎. ‎Replacing the classical sets by Zadeh's fuzzy sets    has the advantage of giving more accuracy and precision in theory‎, ‎as well as    more efficiency and system compatibility in applications‎.
+
+‎A graph is a convenient way of representing information involving  the relationship‎
+‎between objects‎. ‎The objects are represented by vertices and the relations by edges‎.
+ ‎Graph theory is a very important tool to represent many real world problems‎. ‎Nowadays‎, ‎graphs do not represent all the systems properly due to‎
+‎the uncertainty or haziness of the system  parameters‎. ‎In general‎, ‎designing a fuzzy graph model is necessary when there is vagueness in   describing   the objects‎,   ‎their relationships‎, ‎or‎
+  ‎both‎. ‎In addition‎, ‎fuzziness should be added to the representation if‎
+  ‎the relations among accounts are to be measured as good‎
+‎or bad according to the frequency of contacts among the accounts‎, ‎which   motivated‎
+‎to define fuzzy graphs‎, ‎along with many other problems‎.  ‎Rosenfeld   first introduced the concept of fuzzy‎
+‎graphs  and   obtained the fuzzy analogues of several basic graph theoretic concepts like bridges‎, ‎paths‎, ‎cycles‎, ‎trees‎
+‎and connectedness and established some of their properties \cite{12}‎. ‎Then‎,    ‎fuzzy graph theory has attracted a lot  of     attention‎. ‎Fuzzy graph  has some applications such as   data mining‎, ‎image segmentation‎, ‎clustering‎,
+‎image capturing‎, ‎networking‎, ‎communication‎, ‎planning‎, ‎scheduling‎, ‎and the like \cite{aw,rpsb,sa,sa2}‎.
+‎Crisp graph and fuzzy graph are structurally similar( regarding the  generalization of the crisp graph)‎. ‎However‎,  ‎fuzzy graph is emphasized more  when there‎
+‎is an uncertainty on vertices and edges‎. ‎Further‎, ‎the fuzzy graph occurs in many real life situations due to the existence of uncertainty in‎
+ ‎the world‎.
+‎Fuzzy graph theory is developed with large number of branches‎.‎
+
+‎\section{Preliminaries}‎
+‎In this section‎, ‎we review some definitions and results from \cite{GARY  CHARTRAND:2009‎, ‎13}‎, ‎which‎
+‎we need in what follows‎.
+
+‎%\begin{definition}\cite{GARY CHARTRAND:2009}‎
+‎A $($simple$)$graph $G$ is a finite nonempty set $V$ of objects called {\it vertices} (the singular is called {\it vertex}) together with a set $E$ of $2$-element subsets of $V$ called {\it edges} and is shown with $G=(V‎, ‎E)$‎.
+‎Two graphs $G$ and $H$ are isomorphic (they have the same structure) if there exists a bijective function $\varphi‎ : ‎V (G) \longrightarrow V (H)$ such that two vertices $u$ and $v$ are adjacent in‎
+‎$G$ if and only if vertices $\varphi(u)$ and $\varphi(v)$ are adjacent in $H$‎. ‎Then the function $\varphi$ is  called an‎
+‎isomorphism and  we write $G\cong H$‎.
+‎%\end{definition}‎
+ % ‎In this paper‎, ‎every crisp  graph is a  simple graph‎.
+
+ % ‎\begin{definition}‎
+ ‎Let  $ G^*=(V‎, ‎E)$ be a simple graph‎. ‎Then    $G=(\sigma‎, ‎\mu) $ is called a {\it fuzzy graph} on $G^*$‎, ‎if‎
+    ‎$ \sigma‎ : ‎V \rightarrow [0‎, ‎1]$ and  $\mu‎ : ‎E \rightarrow [0‎, ‎1]$‎
+‎and  for all  $xy \in E$ $$\mu(xy) \leq \sigma(x) \wedge \sigma(y)(=\min\{\sigma(x)‎, ‎\sigma(y)\})$$‎
+ % ‎\end{definition}‎
+  ‎%\begin{definition}‎
+  ‎A fuzzy graph   $ G=( \sigma‎, ‎\mu )$  on $G^*$ is called a {\it fuzzy labeling graph}‎, ‎if $\sigma$ and $\mu$ are one to one  maps and‎
+  ‎for all  $xy \in E$  $$\mu(xy) < \sigma(x) \wedge \sigma(y)$$‎
+     % ‎\end{definition}‎
+  ‎%\begin{definition}‎
+  ‎A    fuzzy labeling graph $ G=(  \sigma‎, ‎\mu )$ on $G^*$ is called a {\it fuzzy magic labeling graph}‎, ‎if there exists $m\in (0‎, ‎3)$ (which  is called  a {\it magic value})  such   that   for all  $xy \in E$ $$\sigma (x)‎+  ‎\sigma(y)+\mu(xy)=m$$‎
+ % ‎is  constant value‎.
+   % ‎\end{definition}‎
+
+‎From now on‎, ‎in this paper  $G^*=(V‎, ‎E)$ is a simple graph‎.
+
+‎\section{Fuzzy magic labelizing graphs}‎
+
+‎In this section‎, ‎we investigate how to construct  the fuzzy magic labeling on  a simple graph‎ . ‎For this‎, ‎first we show that any path graphs‎, ‎cyclic  graphs‎, ‎star graphs and complete graphs are fuzzy magic labelizing‎. ‎Then by using that results‎, ‎we prove that any connected graph is a fuzzy magic labelizing graph‎.
+
+‎\begin{definition}‎
+  ‎A simple graph $G^*$ is  called a {\it fuzzy magic labelizing graph}‎, ‎if there exists a fuzzy magic labeling  graph $G=(\sigma‎, ‎\mu)$ on $G^*$‎.
+‎\end{definition}‎
+
+‎\begin{example}‎
+‎Consider the Petersen graph  $G^*$‎. ‎We define‎
+   ‎a fuzzy magic labeling $G=(\sigma‎, ‎\mu)$ on   $G^*$ in Figure \ref{fig:00}‎, ‎as follows‎:
+   ‎\begin{eqnarray*}‎
+ ‎&&  \mu(0.35‎, ‎0.48)=0.15‎, ‎\mu(0.35‎, ‎0.47)=0.16‎, ‎\mu(0.35‎, ‎0.3)=0.33‎, ‎\mu(0.47‎, ‎0.44)=0.07,\\&& \mu(0.47‎, ‎0.49)=0.02‎, ‎\mu(0.49‎, ‎0.43)=0.06‎, ‎\mu(0.49‎, ‎0.46)=0.03‎, ‎\mu(0.46‎, ‎0.42)=0.1,\\&& \mu(0.46‎, ‎0.48)=0.04‎, ‎\mu(0.41‎, ‎0.48)=0.09‎, ‎\mu(0.41‎, ‎0.44)=0.13‎, ‎\mu(0.41‎, ‎0.43)=0.14,\\&& \mu(0.3‎, ‎0.43)=0.25‎, ‎\mu(0.44‎, ‎0.42)=0.12‎, ‎~\mbox{and}~\mu(0.3,‎ ‎0.42)=0.26‎.
+   ‎\end{eqnarray*}‎
+ ‎%So it is a derivable fuzzy magic labeling grap‎
+‎\begin{figure}[!h]‎
+‎\centering‎
+‎\begin{tikzpicture}‎
+
+‎\node ( a3) at ( 0,.5) {$\bullet$};‎
+‎\node ( a3) at‎ ( -‎.4,.5) {$0.3$};‎
+
+ ‎\node ( a3) at‎ ( -‎1,-.5) {$\bullet$};‎
+ ‎\node ( a3) at‎ ( -‎1.2,-.7) {$0.41$};‎
+
+‎\node ( a3) at‎ ( -‎.7,-1.5) {$\bullet$};‎
+‎\node ( a3) at‎ ( -‎.4,-1.7) {$0.42$};‎
+
+ ‎\node ( a3) at ( 1,-.5) {$\bullet$};‎
+ ‎\node ( a3) at ( 1,-.7) {$0.44$};‎
+
+‎\node ( a3) at‎ ( .‎7,-1.5) {$\bullet$};‎
+‎\node ( a3) at‎ ( .‎4,-1.7) {$0.43$};‎
+
+‎\draw ( 0,.5)‎ -‎-(‎ -‎.7,-1.5);‎
+‎\draw ( 0,.5)‎ -‎-(‎ .‎7,-1.5);‎
+‎\draw‎ ( -‎1,-.5)‎ -‎-( 1,-.5);‎
+‎\draw‎ ( -‎1,-.5)‎ -‎-(‎ .‎7,-1.5);‎
+‎\draw‎ ( -‎.7,-1.5)‎ -‎-( 1,-.5);‎
+
+‎\draw ( 0,.5)‎ -‎-( 0‎ ,‎2);‎
+‎\draw‎ ( -‎1,-.5)‎ -‎-(‎ -‎2‎ ,‎0) ;‎
+‎\draw (  1,-.5)‎ -‎-( 2‎ ,‎0) ;‎
+‎\draw‎ ( .‎7,-1.5)‎ -‎-(  1‎ ,‎-2.1) ;‎
+‎\draw‎ ( -‎.7,-1.5)‎ -‎-(‎  -‎1‎ ,‎-2.1) ;‎
+
+‎\node (a4) at ( 0‎ ,‎2) {$\bullet$};‎
+‎\node (a4) at ( 0‎ ,‎2.3) {$0.35$};‎
+
+‎\node (a4) at ( 2‎ ,‎0) {$\bullet$};‎
+‎\node (a4) at ( 2.45‎ ,‎0) {$0.47$};‎
+
+‎\node (a4) at (  1‎ ,‎-2.1) {$\bullet$};‎
+‎\node (a4) at (  1.2‎ ,‎-2.3) {$0.49$};‎
+
+ ‎\node (a4) at‎ ( -‎1‎ ,‎-2.1) {$\bullet$};‎
+‎\node (a4) at‎ ( -‎1.3‎ ,‎-2.3) {$0.46$};‎
+
+‎\node (a4) at‎ ( -‎2‎ ,‎0) {$\bullet$};‎
+‎\node (a4) at‎ ( -‎2.4‎ ,‎0) {$0.48$};‎
+
+‎\draw ( 0‎ ,‎2)‎ -‎-(‎ -‎2‎ ,‎0);‎
+‎\draw ( 0‎ ,‎2)‎ -‎-(  2‎ ,‎0);‎
+‎\draw (  1‎ ,‎-2.1)‎ -‎-(  2‎ ,‎0);‎
+‎\draw (  1‎ ,‎-2.1)‎ -‎-(‎ -‎1‎ ,‎-2.1);‎
+‎\draw‎ ( -‎1‎ ,‎-2.1)‎ -‎-(‎ -‎2‎ ,‎0);‎
+%---------------------------------
+‎\node ( a3) at ( 0,.5) {$\bullet$};‎
+‎\node ( a3) at‎ ( -‎.4,.5) {$0.3$};‎
+
+ ‎\node ( a3) at‎ ( -‎1,-.5) {$\bullet$};‎
+ ‎\node ( a3) at‎ ( -‎1.2,-.7) {$0.41$};‎
+
+‎\node ( a3) at‎ ( -‎.7,-1.5) {$\bullet$};‎
+‎\node ( a3) at‎ ( -‎.4,-1.7) {$0.42$};‎
+
+ ‎\node ( a3) at ( 1,-.5) {$\bullet$};‎
+ ‎\node ( a3) at ( 1,-.7) {$0.44$};‎
+
+‎\node ( a3) at‎ ( .‎7,-1.5) {$\bullet$};‎
+‎\node ( a3) at‎ ( .‎4,-1.7) {$0.43$};‎
+
+‎\draw ( 0,.5)‎ -‎-(‎ -‎.7,-1.5);‎
+‎\draw ( 0,.5)‎ -‎-(‎ .‎7,-1.5);‎
+‎\draw‎ ( -‎1,-.5)‎ -‎-( 1,-.5);‎
+‎\draw‎ ( -‎1,-.5)‎ -‎-(‎ .‎7,-1.5);‎
+‎\draw‎ ( -‎.7,-1.5)‎ -‎-( 1,-.5);‎
+
+‎\draw ( 0,.5)‎ -‎-( 0‎ ,‎2);‎
+‎\draw‎ ( -‎1,-.5)‎ -‎-(‎ -‎2‎ ,‎0) ;‎
+‎\draw (  1,-.5)‎ -‎-( 2‎ ,‎0) ;‎
+‎\draw‎ ( .‎7,-1.5)‎ -‎-(  1‎ ,‎-2.1) ;‎
+‎\draw‎ ( -‎.7,-1.5)‎ -‎-(‎  -‎1‎ ,‎-2.1) ;‎
+
+‎\node (a4) at ( 0‎ ,‎2) {$\bullet$};‎
+‎\node (a4) at ( 0‎ ,‎2.3) {$0.35$};‎
+
+‎\node (a4) at ( 2‎ ,‎0) {$\bullet$};‎
+‎\node (a4) at ( 2.45‎ ,‎0) {$0.47$};‎
+
+‎\node (a4) at (  1‎ ,‎-2.1) {$\bullet$};‎
+‎\node (a4) at (  1.2‎ ,‎-2.3) {$0.49$};‎
+
+ ‎\node (a4) at‎ ( -‎1‎ ,‎-2.1) {$\bullet$};‎
+‎\node (a4) at‎ ( -‎1.3‎ ,‎-2.3) {$0.46$};‎
+
+‎\node (a4) at‎ ( -‎2‎ ,‎0) {$\bullet$};‎
+‎\node (a4) at‎ ( -‎2.4‎ ,‎0) {$0.48$};‎
+
+‎\draw ( 0‎ ,‎2)‎ -‎-(‎ -‎2‎ ,‎0);‎
+‎\draw ( 0‎ ,‎2)‎ -‎-(  2‎ ,‎0);‎
+‎\draw (  1‎ ,‎-2.1)‎ -‎-(  2‎ ,‎0);‎
+‎\draw (  1‎ ,‎-2.1)‎ -‎-(‎ -‎1‎ ,‎-2.1);‎
+‎\draw‎ ( -‎1‎ ,‎-2.1)‎ -‎-(‎ -‎2‎ ,‎0);‎
+‎\end{tikzpicture}‎
+‎\caption{A fuzzy magic labeling of Petersen graph}\label{fig:00}‎
+‎\end{figure}‎
+‎Hence  the Petersen graph $G$ is  a fuzzy magic labelizing graph.\\‎
+‎\end{example}‎
+
+
+‎Now‎, ‎first we show that any  path graph   is a  fuzzy magic labelizing graph‎.
+
+
+
+‎\begin{theorem}\label{th:3.2}‎
+‎Any  path graph $P_n$‎, ‎for $2\leq n\in \mathbb{N}$‎, ‎is   a  fuzzy magic labelizing graph‎.
+‎\end{theorem}‎
+‎\begin{proof}‎
+‎Let $ 2\leq n\in \mathbb{N}$‎,    ‎$V=\{v_1,v_2,v_3,...,v_n\}$‎,   ‎$E=\{e_i=v_iv_{i+1}~|~1\leq i\leq n-1\}$ and  $P_n=(V‎, ‎E)$ be a path graph  as‎
+ ‎Figure \ref{fig:6-2}‎.
+‎\begin{figure}[!h]‎
+‎\centering‎
+‎\begin{tikzpicture}‎
+‎\node at(-1.4,-.7)[]{\large $v_1$};‎
+‎\node at(-1.4,-.4)[]{\large $\bullet$};‎
+
+‎\node at(-.2,-.7)[]{\large $v_2$};‎
+‎\node at(-.2,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (-1.4,-.4)‎ .. ‎controls  (-1.4‎, -‎.4)‎ .. ‎(-.2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_1$}  ;‎
+‎\node at(1,-.4)[]{\large $...$};‎
+‎\draw[red]    (-.2,-.4)‎ .. ‎controls  (- .2, -‎.4)‎ .. ‎(.82,-.4)node[pos=.8‎ ,‎sloped,above] {$e_2$}  ;‎
+‎\node at(2,-.7)[]{\large $v_j$};‎
+‎\node at(2,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (1.2,-.4)‎ .. ‎controls  (1.2,-.4)‎ .. ‎(2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{j-1}$}  ;‎
+‎\draw[red]    (2,-.4)‎ .. ‎controls  ( 2,-.4)‎ .. ‎(5,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{j}$} ;‎
+‎\node at(5,-.7)[]{\large $v_{j+1}$};‎
+‎\node at(5,-.4)[]{\large $\bullet$};‎
+‎\node at(7,-.7)[]{\large $v_{j+2}$};‎
+‎\node at(7,-.4)[]{\large $\bullet$};‎
+
+‎\draw[red]    (7,-.4)‎ .. ‎controls  ( 7,-.4)‎ .. ‎(5,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{j+1}$} ;‎
+‎\node at(8,-.4)[]{\large $...$};‎
+
+‎\draw[red]    (7,-.4)‎ .. ‎controls  ( 7,-.4)‎ .. ‎(7.8,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{j+2}$}  ;‎
+
+‎\draw[red]    (9,-.4)‎ .. ‎controls  ( 9,-.4)‎ .. ‎(8.2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{n-2}$}  ;‎
+‎\node at(9,-.7)[]{\large $v_{n-1}$};‎
+‎\node at(9,-.4)[]{\large $\bullet$};‎
+
+‎\draw[red]    (9,-.4)‎ .. ‎controls  ( 9,-.4)‎ .. ‎(10.5,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{n-1}$}  ;‎
+‎\node at(10.5,-.7)[]{\large $v_n$};‎
+‎\node at(10.5,-.4)[]{\large $\bullet$};‎
+‎\node at(-1.4,-.7)[]{\large $v_1$};‎
+‎\node at(-1.4,-.4)[]{\large $\bullet$};‎
+‎\node at(-.2,-.7)[]{\large $v_2$};‎
+‎\node at(-.2,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (-1.4,-.4)‎ .. ‎controls  (-1.4‎, -‎.4)‎ .. ‎(-.2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_1$}  ;‎
+‎\node at(1,-.4)[]{\large $...$};‎
+‎\draw[red]    (-.2,-.4)‎ .. ‎controls  (- .2, -‎.4)‎ .. ‎(.82,-.4)node[pos=.8‎ ,‎sloped,above] {$e_2$}  ;‎
+‎\node at(2,-.7)[]{\large $v_j$};‎
+‎\node at(2,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (1.2,-.4)‎ .. ‎controls  (1.2,-.4)‎ .. ‎(2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{j-1}$}  ;‎
+‎\draw[red]    (2,-.4)‎ .. ‎controls  ( 2,-.4)‎ .. ‎(5,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{j}$} ;‎
+‎\node at(5,-.7)[]{\large $v_{j+1}$};‎
+‎\node at(5,-.4)[]{\large $\bullet$};‎
+‎\node at(7,-.7)[]{\large $v_{j+2}$};‎
+‎\node at(7,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (7,-.4)‎ .. ‎controls  ( 7,-.4)‎ .. ‎(5,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{j+1}$} ;‎
+‎\node at(8,-.4)[]{\large $...$};‎
+‎\draw[red]    (7,-.4)‎ .. ‎controls  ( 7,-.4)‎ .. ‎(7.8,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{j+2}$}  ;‎
+‎\draw[red]    (9,-.4)‎ .. ‎controls  ( 9,-.4)‎ .. ‎(8.2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{n-2}$}  ;‎
+‎\node at(9,-.7)[]{\large $v_{n-1}$};‎
+‎\node at(9,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (9,-.4)‎ .. ‎controls  ( 9,-.4)‎ .. ‎(10.5,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{n-1}$}  ;‎
+‎\node at(10.5,-.7)[]{\large $v_n$};‎
+‎\node at(10.5,-.4)[]{\large $\bullet$};‎
+‎\end{tikzpicture}‎
+‎\caption{Path graph $P_n$.}\label{fig:6-2}‎
+‎\end{figure}‎
+
+
+
+
+
+‎For all   $1 \leq i \leq n$‎, ‎we  define  the  map  $ \sigma:V\rightarrow [0‎, ‎1]$  as follows‎:
+
+‎\begin{eqnarray*}‎
+‎\sigma(v_i)=\begin{cases}‎
+‎\dis\frac{4n-(i+1)}{2(2n-1)},&‎~ ‎\mbox{if}‎~   ‎i‎ ~ ‎\mbox{is an  odd},\\‎
+‎\dis\frac{3n-(i+1)}{2(2n-1)}‎, ‎&‎ ~ ‎\mbox{if}‎~   ‎i~\mbox{ is  an even and}‎~ ‎n‎ ~‎\mbox{is  an odd},\\‎
+‎\dis\frac{3n-i}{2(2n-1)}‎, ‎&‎ ~ ‎\mbox{if}‎~  ‎i‎ ‎~\mbox{and}~‎ ‎n‎~ ‎\mbox{are evens.}‎
+‎\end{cases}‎
+‎\end{eqnarray*}‎
+ ‎and for all  $1\leq i\leq n-1,$ we define the map $\mu:E\rightarrow [0‎, ‎1]$ by  $\mu(e_i)=\dis\frac{i}{2n-1}$‎.
+
+‎Therefore‎, ‎for all  $2\leq n\in \mathbb{N}$‎, ‎the   path graph $P_n$ is a fuzzy magic labelizing graph‎.
+‎\end{proof}‎
+
+
+
+‎\begin{example}‎
+‎$(i)$ Consider the path graph $P_6$ in Figure \ref{fig:2}‎.
+‎\begin{figure}[!h]‎
+‎\centering‎
+‎%\begin{subfigure}{.3\textwidth}‎
+‎\begin{tikzpicture}‎
+‎\node at(-1.4,-.7)[]{\large $v_1$};‎
+‎\node at(-1.4,-.4)[]{\large $\bullet$};‎
+
+‎\node at(-.2,-.7)[]{\large $v_2$};‎
+‎\node at(-.2,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (-1.4,-.4)‎ .. ‎controls  (-1.4‎, -‎.4)‎ .. ‎(-.2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_1$}  ;‎
+  ‎\node at(1,.-.7)[]{\large $v_3$};‎
+ ‎\node at(1,-.4)[]{\large $\bullet$};‎
+‎%\draw(-.2,-.4)--(.82,-.4);‎
+‎\draw[red]    (-.2,-.4)‎ .. ‎controls  (-.2,-.4)‎ .. ‎(1,-.4)node[pos=.8‎ ,‎sloped,above] {$e_2$}  ;‎
+‎\node at(2,-.7)[]{\large $v_4$};‎
+‎\node at(2,-.4)[]{\large $\bullet$};‎
+‎%\draw(1.2,-.4)--(2,-.4);‎
+‎\draw[red]    (1.2,-.4)‎ .. ‎controls  (1,-.4)‎ .. ‎(2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{3}$}  ;‎
+‎%\draw(2,-.4)--(5,-.4);‎
+‎\draw[red]    (2,-.4)‎ .. ‎controls  (2,-.4)‎ .. ‎(3,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{4}$} ;‎
+‎\node at(3,-.7)[]{\large $v_{5}$};‎
+‎\node at(3,-.4)[]{\large $\bullet$};‎
+‎%\draw(2,-.4)--(5,-.4);‎
+‎\node at(4,-.7)[]{\large $v_{6}$};‎
+‎\node at(4,-.4)[]{\large $\bullet$};‎
+ ‎%\draw(7,-.4)--(5,-.4);‎
+‎\draw[red]    (3,-.4)‎ .. ‎controls  (3,-.4)‎ .. ‎(4,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{5}$} ;‎
+
+‎%________________________‎
+ ‎\node at(-1.4,-.7)[]{\large $v_1$};‎
+‎\node at(-1.4,-.4)[]{\large $\bullet$};‎
+
+‎\node at(-.2,-.7)[]{\large $v_2$};‎
+‎\node at(-.2,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (-1.4,-.4)‎ .. ‎controls  (-1.4‎, -‎.4)‎ .. ‎(-.2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_1$}  ;‎
+  ‎\node at(1,.-.7)[]{\large $v_3$};‎
+ ‎\node at(1,-.4)[]{\large $\bullet$};‎
+‎%\draw(-.2,-.4)--(.82,-.4);‎
+‎\draw[red]    (-.2,-.4)‎ .. ‎controls  (-.2,-.4)‎ .. ‎(1,-.4)node[pos=.8‎ ,‎sloped,above] {$e_2$}  ;‎
+‎\node at(2,-.7)[]{\large $v_4$};‎
+‎\node at(2,-.4)[]{\large $\bullet$};‎
+‎%\draw(1.2,-.4)--(2,-.4);‎
+‎\draw[red]    (1.2,-.4)‎ .. ‎controls  (1,-.4)‎ .. ‎(2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{3}$}  ;‎
+‎%\draw(2,-.4)--(5,-.4);‎
+‎\draw[red]    (2,-.4)‎ .. ‎controls  (2,-.4)‎ .. ‎(3,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{4}$} ;‎
+‎\node at(3,-.7)[]{\large $v_{5}$};‎
+‎\node at(3,-.4)[]{\large $\bullet$};‎
+‎%\draw(2,-.4)--(5,-.4);‎
+‎\node at(4,-.7)[]{\large $v_{6}$};‎
+‎\node at(4,-.4)[]{\large $\bullet$};‎
+ ‎%\draw(7,-.4)--(5,-.4);‎
+‎\draw[red]    (3,-.4)‎ .. ‎controls  (3,-.4)‎ .. ‎(4,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{5}$} ;‎
+‎\end{tikzpicture}‎
+‎\caption{Path graph $P_6$‎. ‎}\label{fig:2}‎
+‎%\end{subfigure}‎
+‎\end{figure}\\‎
+‎For  all $1\leq i\leq 5$‎, ‎we define  $\mu(e_i)=\dis\frac{i}{11}$ and‎
+‎\begin{eqnarray*}‎
+  ‎\sigma(v_1)=1‎, ‎\sigma( v_2)=\frac{8}{11}‎, ‎\sigma( v_3)=\frac{10}{11}‎, ‎\sigma(v_4)=\frac{7}{11}‎, ‎\sigma( v_5)=\frac{9}{11}‎,  ‎\sigma( v_6)=\frac{6}{11}‎
+‎\end{eqnarray*}‎
+
+ ‎Then by Theorem  \ref{th:3.2}‎,  ‎$G=(\sigma,\mu)$ is a fuzzy  magic labeling    on $P_6$ with magic value $\dis\frac{20}{11}$‎.
+ % ‎in Figure \ref{fig:3} and so  the  path graph $P_6$ is a  derivable fuzzy  magic labeling graph‎.
+
+
+
+‎$(ii)$ Consider the path graph $P_7$ in Figure \ref{fig:21}‎.
+‎\begin{figure}[!h]‎
+‎\centering‎
+‎%\begin{subfigure}{.3\textwidth}‎
+‎\begin{tikzpicture}‎
+‎\node at(-1.4,-.7)[]{\large $v_1$};‎
+‎\node at(-1.4,-.4)[]{\large $\bullet$};‎
+
+‎\node at(-.2,-.7)[]{\large $v_2$};‎
+‎\node at(-.2,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (-1.4,-.4)‎ .. ‎controls  (-1.4‎, -‎.4)‎ .. ‎(-.2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_1$}  ;‎
+  ‎\node at(1,.-.7)[]{\large $v_3$};‎
+ ‎\node at(1,-.4)[]{\large $\bullet$};‎
+‎%\draw(-.2,-.4)--(.82,-.4);‎
+‎\draw[red]    (-.2,-.4)‎ .. ‎controls  (-.2,-.4)‎ .. ‎(1,-.4)node[pos=.8‎ ,‎sloped,above] {$e_2$}  ;‎
+‎\node at(2,-.7)[]{\large $v_4$};‎
+‎\node at(2,-.4)[]{\large $\bullet$};‎
+‎%\draw(1.2,-.4)--(2,-.4);‎
+‎\draw[red]    (1.2,-.4)‎ .. ‎controls  (1,-.4)‎ .. ‎(2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{3}$}  ;‎
+‎%\draw(2,-.4)--(5,-.4);‎
+‎\draw[red]    (2,-.4)‎ .. ‎controls  (2,-.4)‎ .. ‎(3,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{4}$} ;‎
+‎\node at(3,-.7)[]{\large $v_{5}$};‎
+‎\node at(3,-.4)[]{\large $\bullet$};‎
+‎%\draw(2,-.4)--(5,-.4);‎
+‎\node at(4,-.7)[]{\large $v_{6}$};‎
+‎\node at(4,-.4)[]{\large $\bullet$};‎
+ ‎%\draw(7,-.4)--(5,-.4);‎
+‎\draw[red]    (3,-.4)‎ .. ‎controls  (3,-.4)‎ .. ‎(4,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{5}$} ;‎
+
+‎%________________________‎
+ ‎\node at(-1.4,-.7)[]{\large $v_1$};‎
+‎\node at(-1.4,-.4)[]{\large $\bullet$};‎
+
+‎\node at(-.2,-.7)[]{\large $v_2$};‎
+‎\node at(-.2,-.4)[]{\large $\bullet$};‎
+‎\draw[red]    (-1.4,-.4)‎ .. ‎controls  (-1.4‎, -‎.4)‎ .. ‎(-.2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_1$}  ;‎
+  ‎\node at(1,.-.7)[]{\large $v_3$};‎
+ ‎\node at(1,-.4)[]{\large $\bullet$};‎
+‎%\draw(-.2,-.4)--(.82,-.4);‎
+‎\draw[red]    (-.2,-.4)‎ .. ‎controls  (-.2,-.4)‎ .. ‎(1,-.4)node[pos=.8‎ ,‎sloped,above] {$e_2$}  ;‎
+‎\node at(2,-.7)[]{\large $v_4$};‎
+‎\node at(2,-.4)[]{\large $\bullet$};‎
+‎%\draw(1.2,-.4)--(2,-.4);‎
+‎\draw[red]    (1.2,-.4)‎ .. ‎controls  (1,-.4)‎ .. ‎(2,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{3}$}  ;‎
+‎%\draw(2,-.4)--(5,-.4);‎
+‎\draw[red]    (2,-.4)‎ .. ‎controls  (2,-.4)‎ .. ‎(3,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{4}$} ;‎
+‎\node at(3,-.7)[]{\large $v_{5}$};‎
+‎\node at(3,-.4)[]{\large $\bullet$};‎
+‎%\draw(2,-.4)--(5,-.4);‎
+‎\node at(4,-.7)[]{\large $v_{6}$};‎
+‎\node at(4,-.4)[]{\large $\bullet$};‎
+ ‎%\draw(7,-.4)--(5,-.4);‎
+‎\draw[red]    (3,-.4)‎ .. ‎controls  (3,-.4)‎ .. ‎(4,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{5}$} ;‎
+‎\node at(5,-.7)[]{\large $v_{7}$};‎
+‎\node at(5,-.4)[]{\large $\bullet$};‎
+ ‎%\draw(7,-.4)--(5,-.4);‎
+‎\draw[red]    (3,-.4)‎ .. ‎controls  (4,-.4)‎ .. ‎(5,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{6}$} ;‎
+‎\node at(5,-.7)[]{\large $v_{7}$};‎
+‎\node at(5,-.4)[]{\large $\bullet$};‎
+ ‎%\draw(7,-.4)--(5,-.4);‎
+‎\draw[red]    (3,-.4)‎ .. ‎controls  (4,-.4)‎ .. ‎(5,-.4)node[pos=.8‎ ,‎sloped,above] {$e_{6}$} ;‎
+‎\end{tikzpicture}‎
+‎\caption{ Path graph $P_7$‎. ‎}\label{fig:21}‎
+‎%\end{subfigure}‎
+‎\end{figure}\\‎
+‎For  all $1\leq i \leq 6‎, ‎$ we define $\mu(e_i)=\frac{i}{13}$ and‎
+‎\[\sigma(v_1)=1‎, ‎\sigma(v_2)=\frac{9}{13}‎, ‎\sigma(v_3)=\frac{12}{13}‎, ‎\sigma(v_4)=\frac{8}{13}‎,  ‎\sigma(v_5)=\frac{11}{13},\sigma( v_6)=\frac{7}{13}‎, ‎\sigma(v_7)=\frac{ 10}{13}\]‎
+‎Let  $e_i=v_iv_{i+1} \in E$‎. ‎We show that  $\mu(e_i) < \sigma(v_i) \wedge \sigma(v_{i+1})$‎, ‎for  all $1\leq i\leq n-1$.\\‎ 
+‎Then by Theorem \ref{th:3.2}‎,  ‎$G=(\sigma,\mu)$ is a fuzzy magic labeling  graph on $P_7$ with magic value $\dis\frac{23}{13}$‎.
+‎\end{example}‎
+
+
+‎\section{ Applications of  fuzzy magic labelizing  graphs‎ }
+
+‎In this section‎, ‎we  apply  the concept  of fuzzy magic labeling of graphs‎
+  ‎for modeling the real  time  applications‎.
+
+ ‎First‎,     ‎the  graph coloring   is  emphasized as one of the most important concepts in graph theory‎, ‎which  is used in many  real  time  applications  like  job  scheduling‎, ‎aircraft   scheduling‎,   ‎computer   network   security‎, ‎map  coloring‎,  ‎GSM  mobile  phone  networks‎, ‎and  automatic   channel   allocation   for   small   wireless local area networks‎. ‎The proper coloring of a graph‎
+‎is the coloring of the vertices with minimal number of colors so that   two adjacent vertices should not  have the same color‎. ‎The minimum number of‎
+‎colors  is  called     ''the  chromatic  number''   and  the‎
+‎graph is called‎  "‎properly colored graph''.\\‎
+
+
+‎Two examples of the    applications of  fuzzy magic labeling of graphs in heating systems and traffic networks are as follows:\\‎
+
+{ ‎\bf Floor heating system for apartments:}‎
+
+‎Consider the floor heating of apartment in Figure \ref{fig:rt}‎.
+‎\begin{figure}[h]‎
+‎\[\includegraphics[scale=.4]{22.jpg}\]‎
+‎\caption{ Model of an   apartment floor heating system.}\label{fig:rt}‎
+‎\end{figure}‎
+‎We can assume the {\large floor$\acute{s}$ pipeline array} as   some kinds of graph such as‎,  ‎path graph$(P_n)$‎, ‎cycle graph$(C_n)$‎, ‎star graph$(S_n)$ or complete graph$(K_n)$‎. ‎Thus‎, ‎the pipe nodes and inter--vertex pipes  are considered   vertex  and the   edge‎, ‎respectively‎.
+‎In a  floor heating system of apartments‎, ‎the warm water   flows through the pipes‎, ‎and  the heat is  conveyed to the  floor‎. ‎Therefore‎, ‎the graph should be fuzzy‎, ‎because the amount of water of each pipe should be less than node's  (i.e‎. ‎pipe’s  have two vertices)‎
+  ‎a minimum capacity which is necessary for water to flow‎. ‎In addition‎, ‎fuzzy magic graph should be preserved to equalize heat and   reach  uniform distribution across the apartment floor‎.    ‎In other words‎, ‎the sum of intra--pipe water plus vertex nodes should be a fixed value‎. 
+
+
+
+‎\section{ Conclusions}‎
+
+ ‎In the  present paper‎, ‎we investigated whether any simple graph is fuzzy magic labelizing‎, ‎by considering the   concept of    fuzzy magic labeling  of   graphs‎.  ‎In fact‎, ‎we proved that  every path graph‎, ‎cycle  graph‎, ‎star graph and finally any connected  graph  is   a  fuzzy magic labelizing  graph‎. ‎Then we introduced  good  applications  about‎ "‎Floor heating system for apartments‎" ‎and‎  "‎Model of a   road network‎" ‎by using  fuzzy magic labeling graphs‎.
+
+‎\section*{Acknowledgement}‎
+‎The authors wish to express their appreciation for several excellent suggestions‎
+‎for improvements in this paper made by the referees.\\‎
+
+
+
+
+‎\begin{thebibliography}{1}‎
+
+‎\bibitem{aw}   M‎. ‎Akram‎, ‎N‎. ‎Waseem‎,  ‎{\it  Novel applications of bipolar fuzzy graphs to decision making problems}‎, ‎Journal of Applied Mathematics and Computing‎,   ‎{\bf 56(1-2)} (2018)‎,  ‎73-91‎.
+
+
+‎\bibitem{9} S‎. ‎Avadayappan‎, ‎P‎. ‎Jeyanthi‎, ‎R‎. ‎Vasuki‎, ‎{\it Super magic strength of a graph}‎, ‎Indian Journal of Pure and Applied Mathematics‎, ‎{\bf 32(11)} (2001)‎, ‎1621-1630‎.
+
+‎\bibitem{99} R‎. ‎A‎. ‎Borzooei‎, ‎H‎. ‎Rashmanlou‎, ‎{\it Cayley interval-valued fuzzy graphs}‎, ‎U.P.B‎. ‎Sci‎. ‎Bull.‎, ‎Series A‎,  ‎{\bf 78(3)} (2016)‎, ‎83-94‎.
+ 
+
+‎\bibitem{j} R‎. ‎A‎. ‎Borzooei‎, ‎H‎. ‎Rashmanlou‎, ‎S‎. ‎Samantac‎, ‎M‎. ‎Pal‎, ‎{\it A study on‎
+ ‎fuzzy labeling graphs}‎, ‎Journal of Intelligent and Fuzzy Systems‎, ‎{\bf 30} (2016)‎,  ‎3349-3355‎.
+
+‎\bibitem{GARY CHARTRAND:2009} G‎. ‎Chartrand‎, ‎P‎. ‎Zhang‎, ‎{\it Chromatic Graph Theory}‎, ‎CRC Press‎, ‎Taylor \& Francis Group‎, ‎(2009)‎.
+
+
+
+‎\bibitem{n} A‎. ‎N‎. ‎Gani‎,  ‎M‎. ‎Akram‎, ‎D‎. ‎R‎.   ‎Subahashini‎, ‎{\it Novel properties of fuzzy labeling graphs}‎,
+‎Journal of Mathematics‎, ‎Article ID 375135‎, ‎(2014)‎, ‎1-6‎.
+
+
+‎\bibitem{mi} A‎. ‎Kotzing‎, ‎A‎. ‎Rosa‎, ‎{\it Magic valuation of finite graphs}‎, ‎Canadian Mathematical Bulletin‎, ‎{\bf 13} (1970)‎, ‎451-461‎.
+
+
+
+
+‎\bibitem{13} A‎. ‎N‎. ‎Gani‎, ‎D‎. ‎R‎. ‎Subahashini‎, ‎{\it Properties of fuzzy labeling graph}‎, ‎Applied Mathematical Sciences‎, ‎{\bf 6 (70)}  (2012)‎, ‎3461--3466‎.
+
+‎\bibitem{10} A‎. ‎A‎. ‎G‎. ‎Ngurah‎, ‎A‎. ‎N‎. ‎M‎. ‎Salman and L‎. ‎Susilowati‎, ‎{\it H-Supermagic labeling of graphs}‎, ‎Discrete Mathematics‎, ‎{\bf 310(8)} (2010)‎, ‎1293-1300‎.
+
+
+
+
+
+ ‎\bibitem{m2}  S‎. ‎Mathew‎, ‎J‎. ‎N‎. ‎Mordeson and D‎. ‎S‎. ‎Malik‎,   ‎{\it Fuzzy Graph Theory}‎, ‎Springer‎, ‎(2018)‎.
+
+
+
+
+‎\bibitem{ro} A‎. ‎Rosa‎, ‎{\it On certain valuations of the vertices of a graph}‎,   ‎Proceeding of the international symposium on theory of graphs‎, ‎Rome‎, ‎Italy‎, ‎July 1966‎.
+
+  ‎\bibitem{h}  H‎.  ‎Rashmanlou‎,  ‎R‎. ‎A‎. ‎Borzooei‎, ‎{\it New Concepts of Fuzzy Labeling Graphs}‎, ‎International Journal of Applied and Computational Mathematics‎, ‎{\bf 3(1)} (2017)‎, ‎173-184‎.
+
+  ‎\bibitem{rpsb}  H‎.  ‎Rashmanlou‎, ‎M‎. ‎Pal‎, ‎S‎. ‎Samanta‎, ‎R‎. ‎A‎. ‎Borzooei‎, ‎{\it  Product of bipolar fuzzy graphs and their degree}‎, ‎International Journal of General Systems‎, ‎{\bf 45(1)} (2016)‎,  ‎1-14‎.
+
+	
+
+‎\bibitem{12} A‎. ‎Rosenfield‎, ‎{\it Fuzzy Sets and their Applications}‎, ‎Academic Press‎, ‎New York‎, ‎(1975)‎,  ‎77-95‎.
+
+
+
+‎\bibitem{sa} M‎. ‎Sarwar‎,  ‎M‎. ‎Akram‎,  ‎{\it  Novel concepts of bipolar fuzzy competition graphs}‎, ‎Journal of Applied Mathematics and Computing‎,   ‎{\bf 54(1-2)} (2017)‎,  ‎511-547‎.
+
+‎\bibitem{sa2} S‎. ‎Sahoo‎,  ‎M‎. ‎Akram‎,  ‎{\it  Intuitionistic fuzzy tolerance graphs with application}‎, ‎Journal of Applied Mathematics and Computing‎,   ‎{\bf 55(1-2)} (2017)‎,  ‎495-511‎.
+
+
+‎\bibitem{4} M‎. ‎S‎. ‎Sunitha‎, ‎A‎. ‎Vijaya Kumar‎,  ‎{\it Complement of a fuzzy graph}‎, ‎Indian Journal of Pure and Applied Mathematics‎, ‎{\bf 33(9)} (2002)‎, ‎1451-1464‎.
+
+
+
+‎\bibitem{6} B‎. ‎M‎. ‎Stewart‎,  ‎{\it Supermagic Complete Graphs}‎, ‎Canadian Journal of Mathematics‎, ‎{\bf 9} (1966),427-438‎.
+
+
+‎\bibitem{11} M‎. ‎Trenkler‎, ‎{\it Some results on magic graphs}‎,  ‎Proceedings of the Third Czechoslovak Symposium on Graph Theory‎,  ‎Leipzig (1983)‎, ‎328-332‎.
+
+
+‎\bibitem{111} Q‎. ‎Wang‎, ‎J‎. ‎Zhan‎, ‎R.A‎. ‎Borzooei‎, ‎{\it A study on soft rough semigroups and corresponding decision making applications}‎, ‎Open Mathematics‎, ‎{\bf 15}  (2017)‎,  ‎1400-1413‎
+
+
+
+‎\bibitem{1} L‎. ‎A‎. ‎Zadeh‎, ‎{\it Fuzzy sets}‎, ‎Information and Control‎, ‎{\bf 8} (1965)‎, ‎338-353‎.
+‎\end{thebibliography}‎
+
+
+
+‎\end{document}
